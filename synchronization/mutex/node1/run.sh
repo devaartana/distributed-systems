@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 ./kv.py --id 1 --tcp 8001 --udp 8101 --peers 127.0.0.1:8002=2,127.0.0.1:8003=3 --logger-addr 127.0.0.1:9000 --numnodes 3 --use-mutex 1 
+python3 ./kv.py --id 1 --tcp 8001 --udp 8101 --peers 192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 --logger-addr 127.0.0.1:9000 --numnodes 5 --use-mutex 0

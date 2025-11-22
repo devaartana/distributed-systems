@@ -2,18 +2,18 @@
 #
 
 # Single PUT to node 1
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003 cmd --node 1  "PUT color black"
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003 cmd --node 2  "PUT color magenta"
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003 cmd --node 2  "PUT warna kuning"
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003 cmd --node 2  "PUT warna kuning"
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003 race "PUT color blue" "PUT color green" 
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003 race "PUT warna oranye" "PUT warna hijau" 
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 cmd --node 1  "PUT color black"
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 cmd --node 2  "PUT color magenta"
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 cmd --node 2  "PUT warna kuning"
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 cmd --node 2  "PUT warna kuning"
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 race "PUT color blue" "PUT color green" 
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5 race "PUT warna oranye" "PUT warna hijau" 
 
 
 echo "-------HASIL----"
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003  getall color
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5  getall color
 echo "-------HASIL----"
-python3 ./kvclient.py --nodes 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003  getall warna
+python3 ./kvclient.py --nodes 192.168.122.185:8001=1,192.168.122.160:8002=2,192.168.122.166:8003=3,192.168.122.159:8004=4,192.168.122.180:8005=5  getall warna
 
 
 
